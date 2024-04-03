@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* container */
+
+#external-container{
+    display: flex;
+    justify-content: center;
+}
+
+#main-container{
+    width: 1000px;
+    border: 2px solid black;
+    height: 800px;
+    margin: 10px;
+    display: flex;
+}
+
+#user-container{
+    display: flex;
+    justify-content: space-between;
+    background: red;
+    align-items: center;
+}
+
+/* container */
+
+/* colonne */
+
+#col-right{
+    width: 55%;
+}
+
+#col-left{
+    width: 45%;
+}
+
+/* colonne */
+
+/* user */
+.user{
+    display: flex;
+    align-items: center;
+}
+/* user */
