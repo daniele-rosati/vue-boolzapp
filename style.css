@@ -26,6 +26,22 @@
     align-items: center;
 }
 
+#notifications-container{
+    display: flex;
+    background-color: aqua;
+    height: 70px;
+    align-items: center;
+}
+
+.container-icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    background: #fff ;
+    color: aqua;
+}
+
 /* container */
 
 /* colonne */
@@ -36,6 +52,7 @@
 
 #col-left{
     width: 45%;
+    border-right: 2px solid black;
 }
 
 /* colonne */
@@ -45,4 +62,33 @@
     display: flex;
     align-items: center;
 }
+
+img{
+    width: 60px;
+    border-radius: 50% ;
+}
 /* user */
+
+/* icons */
+.icon{
+    color: grey;
+    padding: 10px;
+    column-gap: 10px;
+    font-size: 20px;
+    display: flex;
+}
+
+i.fa-solid.fa-bell-slash{
+    position: relative;
+    top: 15px;
+    left: 15px;
+}
+/* icons */
+
+/* txt */
+
+.blurry-txt{
+    text-decoration: underline;
+}
+
+/* txt */
