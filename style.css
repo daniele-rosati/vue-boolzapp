@@ -22,13 +22,13 @@
 #user-container{
     display: flex;
     justify-content: space-between;
-    background: red;
+    background: #eaeaea;
     align-items: center;
 }
 
 #notifications-container{
     display: flex;
-    background-color: aqua;
+    background-color: #8edafc;
     height: 70px;
     align-items: center;
 }
@@ -39,7 +39,10 @@
     border-radius: 50%;
     margin-right: 15px;
     background: #fff ;
-    color: aqua;
+    color: #8edafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* container */
@@ -71,24 +74,20 @@ img{
 
 /* icons */
 .icon{
-    color: grey;
+    color: #b1b1b1;
     padding: 10px;
     column-gap: 10px;
     font-size: 20px;
     display: flex;
 }
 
-i.fa-solid.fa-bell-slash{
-    position: relative;
-    top: 15px;
-    left: 15px;
-}
 /* icons */
 
 /* txt */
 
 .blurry-txt{
     text-decoration: underline;
+    color: #b1b1b1;
 }
 
 /* txt */
