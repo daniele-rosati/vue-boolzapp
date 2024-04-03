@@ -126,6 +126,22 @@ img{
     gap: 10px;
 }
 
+.background-txt{
+    display: flex;
+    flex-direction: column;
+    /* background-image: ; */
+}
+
+.txt-right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.txt-left{
+    display: flex;
+    justify-self: flex-start;
+}
+
 .chat-txt{
     width: 100%;
     padding: 10px;
