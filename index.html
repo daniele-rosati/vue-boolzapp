@@ -14,80 +14,16 @@
 
 </head>
 <body>
-    <!-- container fuori  -->
-    <div id="external-container" > 
-        <!-- container con le due colonne -->
-        <div id="main-container">
-            <!-- colonna destra contenente il nome utente e la chat  -->
-            <div id="col-left">
+    <div id="app">
+        <!-- container fuori  -->
+        <div id="app-wrapper" > 
+            <!-- <div class="back-top" ></div>
+            <div class="back-bottom" ></div> -->
+            <!-- container con le due colonne -->
+            <div id="app-container">
+                <!-- colonna destra contenente il nome utente e la chat  -->
+                <div id="col-left">
 
-                <div class="user-container">
-                    <div class="user">
-                        <img src="starter-pack/img/avatar_io.jpg" alt="user_io">
-                        <div > Nome utente </div>
-                    </div>
-
-                    <div class="icon">
-                        <div><i class="fa-solid fa-circle-notch"></i></div>
-                        <div><i class="fa-solid fa-message"></i></div>
-                        <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
-                    </div>
-                </div>
-                
-                <div id="notifications-container">
-                    <div class="container-icon">
-                        
-                        <i class="fa-solid fa-bell-slash"></i>
-                    </div>
-                    <div>
-                        <p>Ricevi notifiche dei nuovi messaggi</p>
-                        <p class="blurry-txt">Attiva notifiche desktop</p>
-                    </div>
-                </div>
-
-                <div id="search-bar-container">
-                    <div class="icon"> <i class="fa-solid fa-magnifying-glass"></i> </div>
-                    <input class="search-bar" type="text" placeholder="Cerca o inizia una nuova chat">
-                </div>
-
-                <div id="container-users" >
-                    <div class="container-chat" >
-                        <div class="user-chat">
-                            <img src="starter-pack/img/avatar_1.jpg" alt="avatar_1">
-                            <div> Michele</div>
-                        </div>
-                    </div>
-
-                    <div class="container-chat" >
-                        <div class="user-chat">
-                            <img src="starter-pack/img/avatar_2.jpg" alt="avatar_2">
-                            <div> Fabio</div>
-                        </div>
-                    </div>
-
-                    <div class="container-chat" >
-                        <div class="user-chat">
-                            <img src="starter-pack/img/avatar_3.jpg" alt="avatar_3">
-                            <div> Samuele</div>
-                        </div>
-                    </div>
-
-                    <div class="container-chat" >
-                        <div class="user-chat">
-                            <img src="starter-pack/img/avatar_4.jpg" alt="avatar_4">
-                            <div> Alessandro B.</div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-            </div>
-
-            <!-- colonna sinistra conentente le varie chat -->
-            <div id="col-right" >
-
-                <div id="chat-container-active">
                     <div class="user-container">
                         <div class="user">
                             <img src="starter-pack/img/avatar_io.jpg" alt="user_io">
@@ -100,24 +36,92 @@
                             <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
                         </div>
                     </div>
-                     <img class="background-chat" src="starter-pack/img/mine.jpg" alt="background">
-                    <div class="background-text">
-                       
-                        <div class="txt-right" > prova</div>
-                        <div class="txt-right" > prova </div>
-                        <div class="txt-left" > prova </div>
+                    
+                    <div id="notifications-container">
+                        <div class="container-icon">
+                            
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
+                        <div>
+                            <p>Ricevi notifiche dei nuovi messaggi</p>
+                            <p class="blurry-txt">Attiva notifiche desktop</p>
+                        </div>
                     </div>
-                    <div class="txt-message"> 
 
-                        <div class="icon"><i class="fa-regular fa-face-smile"></i></div>
-                        <input class="chat-txt" type="text" placeholder="Scrivi un messaggio">
-                        <div class="icon"> <i class="fa-solid fa-microphone"></i> </div>
+                    <div id="search-bar-container">
+                        <div class="icon"> <i class="fa-solid fa-magnifying-glass"></i> </div>
+                        <input class="search-bar" type="text" placeholder="Cerca o inizia una nuova chat">
+                    </div>
+
+                    <div id="contacts" >
+                        <div class="contact" >
+                            <div class="user-chat">
+                                <img src="starter-pack/img/avatar_1.jpg" alt="avatar_1">
+                                <div> Michele</div>
+                            </div>
+                        </div>
+
+                        <div class="contact" >
+                            <div class="user-chat">
+                                <img src="starter-pack/img/avatar_2.jpg" alt="avatar_2">
+                                <div> Fabio</div>
+                            </div>
+                        </div>
+
+                        <div class="contact" >
+                            <div class="user-chat">
+                                <img src="starter-pack/img/avatar_3.jpg" alt="avatar_3">
+                                <div> Samuele</div>
+                            </div>
+                        </div>
+
+                        <div class="contact" >
+                            <div class="user-chat">
+                                <img src="starter-pack/img/avatar_4.jpg" alt="avatar_4">
+                                <div> Alessandro B.</div>
+                            </div>
+                        </div>
 
                     </div>
+
 
                 </div>
 
+                <!-- colonna sinistra conentente le varie chat -->
+                <div id="col-right" >
 
+                    <div id="chat-container-active">
+                        <div class="user-container">
+                            <div class="user">
+                                <img src="starter-pack/img/avatar_io.jpg" alt="user_io">
+                                <div > Nome utente </div>
+                            </div>
+
+                            <div class="icon">
+                                <div><i class="fa-solid fa-circle-notch"></i></div>
+                                <div><i class="fa-solid fa-message"></i></div>
+                                <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+                            </div>
+                        </div>
+                        <!-- <img class="background-chat" src="starter-pack/img/mine.jpg" alt="background"> -->
+                        <div id="messages" class="background-text" >
+                        
+                            <div class="txt-right sent-message " > </div>
+                            <div class="txt-right sent-message " >   </div>
+                            <div class="txt-left received-message " >   </div>
+                        </div>
+                        <div class="txt-message"> 
+
+                            <div class="icon"><i class="fa-regular fa-face-smile"></i></div>
+                            <input class="chat-txt  message-input " type="text" placeholder="Scrivi un messaggio">
+                            <div class="icon"> <i class="fa-solid fa-microphone"></i> </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
             </div>
         </div>
     </div>
