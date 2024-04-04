@@ -152,6 +152,7 @@ img{
     display: flex;
     flex-direction: column;
     background-image: url("starter-pack/img/mine.jpg");
+    height: 100%;
 }
 
 .txt-right{
