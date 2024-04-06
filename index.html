@@ -22,268 +22,168 @@
     <!-- vuejs -->
     
 </head>
-
 <body>
 
     <div id="app">
-
         <div id="app-wrapper">
-
             <div id="app-container">
-
                 <div class="container h_container">
-
                     <!-- HEADER -->
-
                     <header class="">
-
                         <div class="row">
-
                             <div class="col-5">
-
                                 <div id="user-container" class="d-flex justify-content-between p-2 pe-3">
-
                                     <div class="d-flex gap-2 align-items-center">
-
                                         <div class="user">
-
                                             <img src="starter-pack/img/avatar_io.jpg" alt="user_io">
-
                                             <div > Nome utente </div>
-
                                         </div>
-
                                     </div>
-
                                     <div
-
                                         class="settings d-flex align-items-center gap-3">
                                         <i id="icon"  class="fa-solid fa-circle-notch fa-lg"></i>
                                         <i  id="icon" class="fa-solid fa-message fa-lg"></i>
                                         <i id="icon"  class="fa-solid fa-ellipsis-vertical fa-lg"></i>
-
                                     </div>
-
                                 </div>
-
                             </div>
-
                             <div class="col-7">
-
-                                <div id="open_chat" class="d-flex justify-content-between h-100 p-2 pe-3"></div>
-                                
+                                <div id="open_chat"
+                                    class="d-flex justify-content-between h-100 p-2 pe-3">
                                     <div class="d-flex gap-2 align-items-center">
-
                                         <div class="user_pic">
-
                                             <img :src="contacts[activeContact].avatar" alt="">
-
                                         </div>
-
                                         <!-- user_pic -->
                                         <div>
-
                                             <div class="user_name">
                                                 {{contacts[activeContact].name}}
                                             </div>
-
                                             <div class="user_status">
                                                 Ultimo accesso oggi alle 12:00
                                                
                                             </div>
-
                                         </div>
-
                                     </div>
-                                    
                                     <div
-
                                         class="settings d-flex align-items-center gap-3">
                                         <i  id="icon"  class="fa-solid fa-magnifying-glass fa-lg"></i>
                                         <i  id="icon"  class="fa-solid fa-paperclip fa-lg"></i>
                                         <i  id="icon"  class="fa-solid fa-ellipsis-vertical fa-lg"></i>
-
                                     </div>
-
                                 </div>
-
                             </div>
-
                         </div>
-                       
                     </header>
-
                     <!-- /header -->
                     <main>
-
                         <div class="row">
-
                             <div class="col-5 bg-white">
-
                                 <div id="notifications-container"
-
                                     class="d-flex gap-2 align-items-center p-2 ps-3">
-
                                     <div class="container-icon">
-
                                         <i  id="icon"  class="fa-solid fa-bell-slash fa-lg"></i>
-
                                     </div>
-
                                     <!-- campanella notifiche -->
                                     <div>
-                                        
                                         <div class="fs_16">
                                             Ricevi notifiche di nuovi messaggi
                                         </div>
-
                                         <div
                                             class="blurry-txt">
                                             Attiva notifiche desktop
-
                                         </div>
-
                                     </div>
-
                                 </div>
-
                                 <!-- #notifications -->
-
                                 <form id="#search-bar-container"
                                     id="icon"  class="d-flex input-group p-2 ps-3"
                                     role="search">
-
                                     <button class="btn bg-white" id="searchbar">
                                        
                                         <i id="icon"  class="fa-solid fa-magnifying-glass fa-md"></i>
-
                                     </button>
-
                                     <input id="search" type="text" class="form-control shadow-none" placeholder="Cerca o inizia una nuova chat">
-
                                 </form>
-
                                 <!-- search bar -->
                                 <div>
-
                                     <template v-for="(contact, i) in contacts" :key="i">
-
                                         <div id="preview_chat"
                                             class="d-flex gap-2 align-items-start justify-content-between p-2 ps-3"
                                             @click="selectContact(i)"
                                             :class="i == activeContact ? 'open_chat_bg' : 'close_chat_bg'"
                                             v-if="contact.visible">
-
                                             <div class="info_chat d-flex justify-content-between gap-2">
-
                                                 <div class="user_pic">
-
                                                     <img :src="contact.avatar"
                                                         alt="avatar">
-
                                                 </div>
                                                 
                                                 <div>
-
                                                     <div class="user_name">
                                                         {{contact.name}}
                                                     </div>
-
                                                     <div class="user_status">
                                                         {{contact.messages[contact.messages.length - 1].message}}
-
                                                     </div>
-
                                                 </div>
-
                                             </div>
-
                                         </div>
                                         
                                     </template>
-
                                 </div>
                              
                             </div>
                            
                             <div id="background-text" class="col-7">
-
                                 <div class="container">
-
                                     <div v-for="(message, index) in contacts[activeContact].messages">
-
                                         <div class="row mb-2 justify-content-end"
                                             v-if="message.status === 'sent'"
                                             :key="index">
-
                                             <div class="col-4">
-
                                                 <div id="txt-right" class="message my_message">
-
                                                     {{ message.message }}
-
                                                     <div class="time_message">
-
                                                         {{ message.date }}
-
                                                     </div>
-
                                                 </div>
-
                                             </div>
-
                                         </div>
                                   
                                         <div class="row mb-2" v-else>
-
                                             <div class="col-4">
-
                                                 <div id="txt-left" class="message">
-
                                                     {{message.message}}
-
                                                     <div class="time_message">
-
                                                         {{message.date}}
-
                                                     </div>
-
                                                 </div>
-
                                             </div>
-
                                         </div>
                                       
                                     </div>
-
                                 </div>
                                 <!-- container -->
                             </div>
-                            <!-- ------ barra dei messaggi ------ -->
+                            <!-- ------ message bar ------ -->
                             <div class="col-5 bg-white"></div>
-
                             <div class="col-7">
-
                                 <div id="message_bar">
-
                                     <div class="d-flex p-3 pe-4 ps-4 align-items-center">
-
                                         <span class="btn bg-transparent border-0 pe-4 ">
-
-                                            <i id="icon" class="fa-regular fa-face-smile fa-lg"></i>
-
+                                            <i id="icon"  class="fa-regular fa-face-smile fa-lg"></i>
                                         </span>
-
-                                        <input type="text" class="w-100 border-0 p-2" placeholder="Scrivi un messaggio" >
-      
-                                        <button class="btn bg-transparent border-0 ps-4">
-                                           
+                                        <input type="text"
+                                            class="w-100 border-0 p-2"
+                                            placeholder="Scrivi un messaggio"
+                                            v-model="userText"
+                                            @keyup.enter="sendMessage">
+                                        <button
+                                            class="btn bg-transparent border-0 ps-4">
                                             <i id="icon"  class="fa-solid fa-microphone fa-lg"></i>
-
                                         </button>
-
                                     </div>
-
                                 </div>
                              
                             </div>
